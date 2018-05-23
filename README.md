@@ -2,6 +2,6 @@
 
 
 
-You can visit localhost:8080/demo?wsdl to see the WSDL of this Web service.
+You can visit https://localhost:8080/demo?wsdl/ to see the WSDL of this Web service.
 
 
