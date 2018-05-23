@@ -11,18 +11,15 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
 
-public class HelloWorldClident {
+public class HelloWorldClient {
 	
 	private final static QName SERVICE_NAME=new QName("http://demo.jaxws.com/", "HelloWorldImplService");
 	private final static QName PORT_NAME=new QName("http://demo.jaxws.com/", "HelloWorldImplPort");
 	private final static String ADDRESS="http://localhost:8080/demo?wsdl";
 	
-	//此方法可以在本地测试此WebService是否正确
-	
 	public static void main(String[] args) throws MalformedURLException {
+		// find a web service by providing an WSDL of a Web service
 		Service service = Service.create(new URL(ADDRESS),SERVICE_NAME);
-
-		// find a web service by providing an identical URL of a Web service
         IHelloWorld hw = service.getPort(IHelloWorld.class);
 
         // call service operation
@@ -33,7 +30,6 @@ public class HelloWorldClident {
         int date = hw.checkTime(new Date());
         System.out.println(date);
 
-//		System.out.println("test");
 	}
 
 }
