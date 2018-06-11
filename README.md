@@ -1,4 +1,4 @@
-# A simple JAX-WS (Java API forXML-Based Web Services) demo 
+# A simple JAX-WS (Java API forXML-Based Web Services) demo based on SOAP
 
 
 
